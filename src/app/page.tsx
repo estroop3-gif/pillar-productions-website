@@ -186,7 +186,7 @@ export default function Home() {
                   A motorsports series set in Sarasota, following builders, drivers, and dreamers chasing speed, community, and calling on and off the track.
                 </p>
                 <p className="text-sm text-neutral-600">
-                  Status: In development
+                  Status: In production
                 </p>
               </div>
               <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 flex flex-col">
