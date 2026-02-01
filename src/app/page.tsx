@@ -22,6 +22,9 @@ export default function Home() {
               <a href="#ecosystem" className="text-sm text-neutral-400 hover:text-white transition-colors tracking-wide">
                 Ecosystem
               </a>
+              <a href="#locations" className="text-sm text-neutral-400 hover:text-white transition-colors tracking-wide">
+                Locations
+              </a>
               <a href="#contact" className="text-sm text-neutral-400 hover:text-white transition-colors tracking-wide">
                 Contact
               </a>
@@ -324,6 +327,81 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="locations" className="border-t border-neutral-900">
+          <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
+            <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
+              Locations
+            </p>
+            <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6 max-w-3xl">
+              Rooted locally, reaching globally.
+            </h2>
+            <p className="text-lg text-neutral-400 leading-relaxed mb-12 max-w-3xl">
+              Pillar Productions operates across four strategic locations, each bringing a unique perspective to the stories we tell.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <a href="/locations/tampa" className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 hover:border-neutral-700 transition-colors group">
+                <p className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-3">
+                  Headquarters
+                </p>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-neutral-300 transition-colors">
+                  Tampa, Florida
+                </h3>
+                <p className="text-neutral-400 leading-relaxed">
+                  Home base for Pillar Productions. Our headquarters and primary production hub on the Gulf Coast.
+                </p>
+              </a>
+              <a href="/locations/nigeria" className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 hover:border-neutral-700 transition-colors group">
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-xs tracking-[0.2em] uppercase text-neutral-500">
+                    West Africa
+                  </p>
+                  <span className="text-xs tracking-[0.15em] uppercase text-neutral-600 border border-neutral-800 px-3 py-1 rounded-full">
+                    Coming soon
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-neutral-300 transition-colors">
+                  Nigeria
+                </h3>
+                <p className="text-neutral-400 leading-relaxed">
+                  Expanding into one of the world&apos;s most vibrant storytelling markets, bringing cinematic quality to Nigerian stories.
+                </p>
+              </a>
+              <a href="/locations/mcallen" className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 hover:border-neutral-700 transition-colors group">
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-xs tracking-[0.2em] uppercase text-neutral-500">
+                    South Texas
+                  </p>
+                  <span className="text-xs tracking-[0.15em] uppercase text-neutral-600 border border-neutral-800 px-3 py-1 rounded-full">
+                    Coming soon
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-neutral-300 transition-colors">
+                  McAllen, Texas
+                </h3>
+                <p className="text-neutral-400 leading-relaxed">
+                  Positioned at the crossroads of American and Latin culture in the Rio Grande Valley.
+                </p>
+              </a>
+              <a href="/locations/jackson" className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 hover:border-neutral-700 transition-colors group">
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-xs tracking-[0.2em] uppercase text-neutral-500">
+                    Deep South
+                  </p>
+                  <span className="text-xs tracking-[0.15em] uppercase text-neutral-600 border border-neutral-800 px-3 py-1 rounded-full">
+                    Coming soon
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-neutral-300 transition-colors">
+                  Jackson, Mississippi
+                </h3>
+                <p className="text-neutral-400 leading-relaxed">
+                  Rooted in the heart of the South, telling stories shaped by faith, resilience, and culture.
+                </p>
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" className="border-t border-neutral-900">
           <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
             <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
@@ -358,7 +436,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 lg:px-12 py-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-neutral-500">
             <p>© {year} Pillar Productions. All rights reserved.</p>
-            <p>Based in the United States.</p>
+            <p>Tampa · Nigeria · McAllen · Jackson</p>
           </div>
         </div>
       </footer>
