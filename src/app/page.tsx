@@ -1,70 +1,40 @@
-export default function Home() {
-  const year = new Date().getFullYear();
+import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
+export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-neutral-900">
-        <div className="max-w-6xl mx-auto px-4 lg:px-12">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            <a href="#" className="text-sm lg:text-base font-semibold tracking-[0.2em] uppercase">
-              Pillar Productions
-            </a>
-            <nav className="hidden md:flex items-center gap-8">
-              <a href="#about" className="text-sm text-neutral-400 hover:text-white transition-colors tracking-wide">
-                About
-              </a>
-              <a href="#work" className="text-sm text-neutral-400 hover:text-white transition-colors tracking-wide">
-                Work
-              </a>
-              <a href="#approach" className="text-sm text-neutral-400 hover:text-white transition-colors tracking-wide">
-                Approach
-              </a>
-              <a href="#ecosystem" className="text-sm text-neutral-400 hover:text-white transition-colors tracking-wide">
-                Ecosystem
-              </a>
-              <a href="#locations" className="text-sm text-neutral-400 hover:text-white transition-colors tracking-wide">
-                Locations
-              </a>
-              <a href="#contact" className="text-sm text-neutral-400 hover:text-white transition-colors tracking-wide">
-                Contact
-              </a>
-            </nav>
-            <nav className="flex md:hidden">
-              <a href="#contact" className="text-sm text-neutral-400 hover:text-white transition-colors">
-                Contact
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
-      <main>
-        <section className="min-h-screen flex items-center pt-20">
+      <main className="pt-20">
+        {/* Hero */}
+        <section className="min-h-[calc(100vh-5rem)] flex items-center">
           <div className="max-w-6xl mx-auto px-4 lg:px-12 py-16 lg:py-24 w-full">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div>
                 <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
-                  Independent production company
+                  Multi hub studio
                 </p>
                 <h1 className="text-4xl lg:text-6xl font-semibold leading-tight tracking-tight mb-6">
                   Stories that outlive the moment.
                 </h1>
                 <p className="text-lg lg:text-xl text-neutral-400 leading-relaxed mb-10 max-w-xl">
-                  Pillar Productions crafts cinematic stories with eternal weight for film, television, and streaming. Grounded, character driven, and spiritually aware work for a new era of storytelling.
+                  Pillar Productions is a multi hub studio building owned series at scale. Cinematic, character driven, and spiritually aware work for film, television, and streaming.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="#work"
+                  <Link
+                    href="/catalog"
                     className="inline-flex items-center justify-center px-6 py-3 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
                   >
-                    View our work
-                  </a>
-                  <a
-                    href="#contact"
+                    Request Catalog
+                  </Link>
+                  <Link
+                    href="/branded-series#inquiry"
                     className="inline-flex items-center justify-center px-6 py-3 border border-neutral-700 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:bg-neutral-900 transition-colors"
                   >
-                    Partner with us
-                  </a>
+                    Brand Inquiry
+                  </Link>
                 </div>
               </div>
               <div className="lg:justify-self-end w-full lg:w-96">
@@ -90,6 +60,48 @@ export default function Home() {
           </div>
         </section>
 
+        {/* How Pillar Works */}
+        <section className="border-t border-neutral-900">
+          <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
+            <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
+              How Pillar works
+            </p>
+            <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-12 max-w-3xl">
+              Three engines. One studio.
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900">
+                <h3 className="text-xl font-semibold mb-4">HQ</h3>
+                <p className="text-neutral-400 leading-relaxed mb-6">
+                  Tampa is the control tower where flagship shows are developed, finished, and quality controlled.
+                </p>
+                <Link href="/studio-model" className="text-sm text-neutral-500 hover:text-white transition-colors underline underline-offset-4">
+                  Learn more
+                </Link>
+              </div>
+              <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900">
+                <h3 className="text-xl font-semibold mb-4">Hubs</h3>
+                <p className="text-neutral-400 leading-relaxed mb-6">
+                  Skeleton crews in Abuja, McAllen, and Jackson produce light seasons with local stories at volume.
+                </p>
+                <Link href="/studio-model" className="text-sm text-neutral-500 hover:text-white transition-colors underline underline-offset-4">
+                  Learn more
+                </Link>
+              </div>
+              <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900">
+                <h3 className="text-xl font-semibold mb-4">Windows</h3>
+                <p className="text-neutral-400 leading-relaxed mb-6">
+                  Every title is licensed through structured windows by territory, platform, and exclusivity.
+                </p>
+                <Link href="/studio-model" className="text-sm text-neutral-500 hover:text-white transition-colors underline underline-offset-4">
+                  Learn more
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About */}
         <section id="about" className="border-t border-neutral-900">
           <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
             <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
@@ -109,6 +121,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What we make */}
         <section className="border-t border-neutral-900">
           <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
             <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
@@ -155,6 +168,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Selected projects */}
         <section id="work" className="border-t border-neutral-900">
           <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
             <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
@@ -163,7 +177,45 @@ export default function Home() {
             <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-12 max-w-3xl">
               A slate shaped by sport, speed, and faith.
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 flex flex-col">
+                <p className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-3">
+                  Docu series &middot; Flagship
+                </p>
+                <h3 className="text-xl font-semibold mb-4">
+                  Coastal Torque
+                </h3>
+                <p className="text-neutral-400 leading-relaxed mb-6 flex-grow">
+                  A motorsports docu series set in Sarasota, following builders, drivers, and dreamers chasing speed, community, and calling on and off the track.
+                </p>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-neutral-600">
+                    Status: In production
+                  </p>
+                  <div className="bg-neutral-900 rounded-full px-3 py-1 text-xs text-neutral-600 cursor-not-allowed">
+                    Trailer coming soon
+                  </div>
+                </div>
+              </div>
+              <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 flex flex-col">
+                <p className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-3">
+                  Competition reality &middot; Flagship
+                </p>
+                <h3 className="text-xl font-semibold mb-4">
+                  Serve It Up
+                </h3>
+                <p className="text-neutral-400 leading-relaxed mb-6 flex-grow">
+                  Twelve contestants, six pros and six amateurs, compete across a full season of pickleball. Pros and amateurs live in two separate houses. Each week, every pro is paired with a different beginner. Every third episode culminates in a tournament. Point standings are never revealed to the players. At the end, the top scoring pro and the top scoring amateur split a $10,000 prize.
+                </p>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-neutral-600">
+                    Status: In development
+                  </p>
+                  <div className="bg-neutral-900 rounded-full px-3 py-1 text-xs text-neutral-600 cursor-not-allowed">
+                    Trailer coming soon
+                  </div>
+                </div>
+              </div>
               <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 flex flex-col">
                 <p className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-3">
                   Mini documentary series
@@ -174,42 +226,38 @@ export default function Home() {
                 <p className="text-neutral-400 leading-relaxed mb-6 flex-grow">
                   A six part docu series following Niko and Christie Fronimos as they represent Greece at the Pickleball World Cup, blending elite sport, family, and faith.
                 </p>
-                <p className="text-sm text-neutral-600">
-                  Status: In production
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-neutral-600">
+                    Status: In production
+                  </p>
+                  <div className="bg-neutral-900 rounded-full px-3 py-1 text-xs text-neutral-600 cursor-not-allowed">
+                    Trailer coming soon
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Proof element: one sheet + catalog access */}
+            <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <p className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-2">
+                  One sheets and press materials
+                </p>
+                <p className="text-neutral-400 leading-relaxed">
+                  Downloadable one sheets, episode guides, and technical specs are available through the catalog.
                 </p>
               </div>
-              <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 flex flex-col">
-                <p className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-3">
-                  Docu series
-                </p>
-                <h3 className="text-xl font-semibold mb-4">
-                  Coastal Torque
-                </h3>
-                <p className="text-neutral-400 leading-relaxed mb-6 flex-grow">
-                  A motorsports series set in Sarasota, following builders, drivers, and dreamers chasing speed, community, and calling on and off the track.
-                </p>
-                <p className="text-sm text-neutral-600">
-                  Status: In production
-                </p>
-              </div>
-              <div className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 flex flex-col">
-                <p className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-3">
-                  Competition reality
-                </p>
-                <h3 className="text-xl font-semibold mb-4">
-                  Serve It Up
-                </h3>
-                <p className="text-neutral-400 leading-relaxed mb-6 flex-grow">
-                  A high energy, character driven pickleball series where pros and beginners share a house, swap partners, and compete for a season long prize.
-                </p>
-                <p className="text-sm text-neutral-600">
-                  Status: In development
-                </p>
-              </div>
+              <Link
+                href="/catalog"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors whitespace-nowrap"
+              >
+                Request Catalog
+              </Link>
             </div>
           </div>
         </section>
 
+        {/* Approach */}
         <section id="approach" className="border-t border-neutral-900">
           <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
             <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
@@ -270,6 +318,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Ecosystem */}
         <section id="ecosystem" className="border-t border-neutral-900">
           <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
             <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
@@ -293,7 +342,7 @@ export default function Home() {
                   Born to Create Project is a filmmaking and storytelling retreat experience for faith driven creatives. It is a sacred space for filmmakers, photographers, and storytellers to encounter God, refine their craft, and release work that carries eternal weight.
                 </p>
                 <p className="text-sm text-neutral-500 italic mb-6">
-                  Tagline: &ldquo;Where creativity meets calling.&rdquo;
+                  &ldquo;Where creativity meets calling.&rdquo;
                 </p>
                 <a
                   href="https://www.thebtcp.com"
@@ -327,119 +376,43 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="locations" className="border-t border-neutral-900">
-          <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
-            <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
-              Locations
-            </p>
-            <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6 max-w-3xl">
-              Rooted locally, reaching globally.
-            </h2>
-            <p className="text-lg text-neutral-400 leading-relaxed mb-12 max-w-3xl">
-              Pillar Productions operates across four strategic locations, each bringing a unique perspective to the stories we tell.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <a href="/locations/tampa" className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 hover:border-neutral-700 transition-colors group">
-                <p className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-3">
-                  Headquarters
-                </p>
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-neutral-300 transition-colors">
-                  Tampa, Florida
-                </h3>
-                <p className="text-neutral-400 leading-relaxed">
-                  Home base for Pillar Productions. Our headquarters and primary production hub on the Gulf Coast.
-                </p>
-              </a>
-              <a href="/locations/nigeria" className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 hover:border-neutral-700 transition-colors group">
-                <div className="flex items-center justify-between mb-3">
-                  <p className="text-xs tracking-[0.2em] uppercase text-neutral-500">
-                    West Africa
-                  </p>
-                  <span className="text-xs tracking-[0.15em] uppercase text-neutral-600 border border-neutral-800 px-3 py-1 rounded-full">
-                    Coming soon
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-neutral-300 transition-colors">
-                  Nigeria
-                </h3>
-                <p className="text-neutral-400 leading-relaxed">
-                  Expanding into one of the world&apos;s most vibrant storytelling markets, bringing cinematic quality to Nigerian stories.
-                </p>
-              </a>
-              <a href="/locations/mcallen" className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 hover:border-neutral-700 transition-colors group">
-                <div className="flex items-center justify-between mb-3">
-                  <p className="text-xs tracking-[0.2em] uppercase text-neutral-500">
-                    South Texas
-                  </p>
-                  <span className="text-xs tracking-[0.15em] uppercase text-neutral-600 border border-neutral-800 px-3 py-1 rounded-full">
-                    Coming soon
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-neutral-300 transition-colors">
-                  McAllen, Texas
-                </h3>
-                <p className="text-neutral-400 leading-relaxed">
-                  Positioned at the crossroads of American and Latin culture in the Rio Grande Valley.
-                </p>
-              </a>
-              <a href="/locations/jackson" className="bg-neutral-950 rounded-2xl p-8 border border-neutral-900 hover:border-neutral-700 transition-colors group">
-                <div className="flex items-center justify-between mb-3">
-                  <p className="text-xs tracking-[0.2em] uppercase text-neutral-500">
-                    Deep South
-                  </p>
-                  <span className="text-xs tracking-[0.15em] uppercase text-neutral-600 border border-neutral-800 px-3 py-1 rounded-full">
-                    Coming soon
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-neutral-300 transition-colors">
-                  Jackson, Mississippi
-                </h3>
-                <p className="text-neutral-400 leading-relaxed">
-                  Rooted in the heart of the South, telling stories shaped by faith, resilience, and culture.
-                </p>
-              </a>
-            </div>
-          </div>
-        </section>
-
+        {/* Contact CTA */}
         <section id="contact" className="border-t border-neutral-900">
-          <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
+          <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32 text-center">
             <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
-              Partner with Pillar
+              Get started
             </p>
-            <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6 max-w-3xl">
-              Looking to develop or co produce a project?
+            <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6 max-w-3xl mx-auto">
+              Ready to license, partner, or build?
             </h2>
-            <p className="text-lg text-neutral-400 leading-relaxed mb-6 max-w-3xl">
-              We collaborate with studios, networks, ministries, and brands that want cinematic storytelling with depth. Reach out to discuss development, financing, or co production opportunities.
+            <p className="text-lg text-neutral-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+              Whether you are a broadcaster looking for content, a brand exploring a series, or a partner interested in building a hub, we want to hear from you.
             </p>
-            <p className="text-lg text-neutral-400 mb-10">
-              Email:{" "}
-              <a
-                href="mailto:estroop3@gmail.com"
-                className="text-white hover:text-neutral-300 transition-colors underline underline-offset-4"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/catalog"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
               >
-                estroop3@gmail.com
-              </a>
-            </p>
-            <a
-              href="mailto:estroop3@gmail.com?subject=Pillar%20Productions%20Inquiry"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
-            >
-              Start a conversation
-            </a>
+                Request Catalog
+              </Link>
+              <Link
+                href="/branded-series#inquiry"
+                className="inline-flex items-center justify-center px-8 py-4 border border-neutral-700 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:bg-neutral-900 transition-colors"
+              >
+                Brand Inquiry
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 border border-neutral-700 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:bg-neutral-900 transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-neutral-900">
-        <div className="max-w-6xl mx-auto px-4 lg:px-12 py-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-neutral-500">
-            <p>© {year} Pillar Productions. All rights reserved.</p>
-            <p>Tampa · Nigeria · McAllen · Jackson</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
