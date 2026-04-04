@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Contact Pillar Productions | Licensing, Brand Partnerships, and Inquiries",
   description:
     "Get in touch with Pillar Productions about licensing original series, brand entertainment partnerships, press inquiries, or hub proposals. We help brands get into film and television.",
-  alternates: { canonical: "https://www.pillarproductions.tv/contact" },
+  alternates: { canonical: "https://www.pillarproductionsusa.com/contact" },
   openGraph: {
     title: "Contact Pillar Productions",
     description:

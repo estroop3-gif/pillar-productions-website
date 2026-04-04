@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Original Series and Films | Docuseries, Competition Reality, and Branded Entertainment",
   description:
     "Watch original series from Pillar Productions including Coastal Torque (motorsports docuseries), Serve It Up (pickleball competition reality), and Serving for Greece (Pickleball World Cup documentary). Cinematic originals available for licensing and brand partnerships.",
-  alternates: { canonical: "https://www.pillarproductions.tv/shows" },
+  alternates: { canonical: "https://www.pillarproductionsusa.com/shows" },
   openGraph: {
     title: "Original Series and Films | Pillar Productions",
     description:

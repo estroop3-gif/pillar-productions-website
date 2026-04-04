@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://www.pillarproductions.tv";
+const SITE_URL = "https://www.pillarproductionsusa.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

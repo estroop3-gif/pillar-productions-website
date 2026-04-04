@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "License Original Series and Films for Broadcast and Streaming",
   description:
     "License Pillar Productions original series, docuseries, and films for broadcast, streaming, FAST channels, airlines, hotels, and telcos worldwide. Windowed by territory, platform, and exclusivity. Broadcast-ready deliverables included.",
-  alternates: { canonical: "https://www.pillarproductions.tv/licensing" },
+  alternates: { canonical: "https://www.pillarproductionsusa.com/licensing" },
   openGraph: {
     title: "License Original Series and Films | Pillar Productions",
     description:

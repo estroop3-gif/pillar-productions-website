@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Pillar Productions | Brand Entertainment Production Partner — How to Get Your Brand Into Film and TV",
   description:
     "Pillar Productions is a producing partner that helps brands get into film and television. We produce branded series, docuseries, and cinematic content. Learn how to make a TV show or film for your brand. Book a free strategy call.",
-  alternates: { canonical: "https://www.pillarproductions.tv" },
+  alternates: { canonical: "https://www.pillarproductionsusa.com" },
   openGraph: {
     title: "Pillar Productions | Brand Entertainment Production Partner",
     description:

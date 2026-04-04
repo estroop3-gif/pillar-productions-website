@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://www.pillarproductions.tv/sitemap.xml",
+    sitemap: "https://www.pillarproductionsusa.com/sitemap.xml",
   };
 }

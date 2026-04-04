@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Original Series Catalog and Screener Access",
   description:
     "Request the Pillar Productions catalog with original series, docuseries, and film titles available for licensing. Includes synopses, episode counts, territory availability, and secure screener access for qualified buyers.",
-  alternates: { canonical: "https://www.pillarproductions.tv/catalog" },
+  alternates: { canonical: "https://www.pillarproductionsusa.com/catalog" },
   openGraph: {
     title: "Original Series Catalog | Pillar Productions",
     description:

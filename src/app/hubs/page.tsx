@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Production Hub Locations | Abuja, McAllen, and Jackson",
   description:
     "Pillar Productions operates production hubs in Abuja (Nigeria), McAllen (Texas), and Jackson (Mississippi). Skeleton crews producing original series at volume with local stories and global distribution reach.",
-  alternates: { canonical: "https://www.pillarproductions.tv/hubs" },
+  alternates: { canonical: "https://www.pillarproductionsusa.com/hubs" },
   openGraph: {
     title: "Production Hub Locations | Pillar Productions",
     description:

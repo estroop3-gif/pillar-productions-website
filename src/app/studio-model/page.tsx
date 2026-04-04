@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "How Our Production Studio Works | Multi-Hub Film and TV Production",
   description:
     "How Pillar Productions operates as a multi-hub production studio for film and television. HQ in Tampa, production hubs in Abuja, McAllen, and Jackson. Window licensing, library flywheel, and scalable series production for brands and platforms.",
-  alternates: { canonical: "https://www.pillarproductions.tv/studio-model" },
+  alternates: { canonical: "https://www.pillarproductionsusa.com/studio-model" },
   openGraph: {
     title: "Studio Model | Pillar Productions",
     description:

@@ -25,6 +25,7 @@ const VALID_FORM_TYPES = [
   "catalog-request",
   "screener-request",
   "general-contact",
+  "brand-consultation",
 ];
 
 const SUBJECT_MAP: Record<string, string> = {
@@ -33,6 +34,7 @@ const SUBJECT_MAP: Record<string, string> = {
   "catalog-request": "Catalog Request",
   "screener-request": "Screener Access Request",
   "general-contact": "General Contact",
+  "brand-consultation": "Brand Entertainment Strategy Call",
 };
 
 export async function POST(request: NextRequest) {

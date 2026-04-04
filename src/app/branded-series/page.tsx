@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Branded Series Production | How to Make a TV Show for Your Brand",
   description:
     "Learn how to create a branded TV series with Pillar Productions. We produce original series with natural brand integration — not ads, not sponsored content. Brand-funded, co-owned, or work-for-hire deal structures. See how to make a TV show that audiences actually want to watch.",
-  alternates: { canonical: "https://www.pillarproductions.tv/branded-series" },
+  alternates: { canonical: "https://www.pillarproductionsusa.com/branded-series" },
   openGraph: {
     title: "Branded Series Production | How to Make a TV Show for Your Brand",
     description:

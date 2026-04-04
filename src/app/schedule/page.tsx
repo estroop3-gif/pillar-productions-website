@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Book a Free Strategy Call | Brand Entertainment Consultation",
   description:
     "Book a free 30-minute strategy call with Pillar Productions. We will discuss how to get your brand into film and television, which format fits your goals, and what the process looks like from concept to screen.",
-  alternates: { canonical: "https://www.pillarproductions.tv/schedule" },
+  alternates: { canonical: "https://www.pillarproductionsusa.com/schedule" },
   openGraph: {
     title: "Book a Free Strategy Call | Pillar Productions",
     description:
