@@ -1,5 +1,6 @@
 // Force dynamic rendering — this route checks env vars at runtime
 export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 interface Contact {
   email: string;
