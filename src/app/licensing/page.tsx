@@ -1,60 +1,19 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
-import InquiryForm from "@/components/InquiryForm";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Licensing | Pillar Productions",
+  title:
+    "License Original Series and Films for Broadcast and Streaming",
   description:
-    "License Pillar Productions originals for broadcast, streaming, FAST channels, airlines, hotels, and telcos. Request our catalog or screener access.",
+    "License Pillar Productions original series, docuseries, and films for broadcast, streaming, FAST channels, airlines, hotels, and telcos worldwide. Windowed by territory, platform, and exclusivity. Broadcast-ready deliverables included.",
+  alternates: { canonical: "https://www.pillarproductions.tv/licensing" },
   openGraph: {
-    title: "Licensing | Pillar Productions",
+    title: "License Original Series and Films | Pillar Productions",
     description:
-      "License Pillar Productions originals for broadcast, streaming, FAST channels, airlines, hotels, and telcos.",
+      "License original series and films for broadcast, streaming, and FAST platforms worldwide.",
   },
 };
-
-const catalogFields = [
-  { name: "company", label: "Company Name", required: true },
-  {
-    name: "platformType",
-    label: "Platform Type",
-    type: "select" as const,
-    required: true,
-    options: [
-      "Broadcast Network",
-      "Streaming Platform",
-      "FAST Channel",
-      "Airline",
-      "Hotel",
-      "Telco",
-      "Other",
-    ],
-  },
-  { name: "territory", label: "Territory", required: true, placeholder: "e.g. North America, Sub Saharan Africa" },
-  {
-    name: "windowType",
-    label: "Window Type",
-    type: "select" as const,
-    required: true,
-    options: [
-      "First Window Exclusive",
-      "Second Window",
-      "Non Exclusive",
-      "AVOD / FAST",
-      "Unsure",
-    ],
-  },
-  { name: "email", label: "Email", type: "email" as const, required: true },
-  { name: "message", label: "Message (optional)", type: "textarea" as const },
-];
-
-const screenerFields = [
-  { name: "company", label: "Company Name", required: true },
-  { name: "role", label: "Your Role", required: true },
-  { name: "email", label: "Email", type: "email" as const, required: true },
-  { name: "titles", label: "Titles of Interest", placeholder: "e.g. Coastal Torque, Serve It Up" },
-  { name: "message", label: "Message (optional)", type: "textarea" as const },
-];
 
 const faq = [
   {
@@ -186,54 +145,28 @@ export default function LicensingPage() {
         </div>
       </section>
 
-      {/* Catalog request form */}
+      {/* CTA */}
       <section id="catalog" className="border-t border-neutral-900">
-        <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
-              <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
-                Request catalog
-              </p>
-              <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6">
-                See the full slate.
-              </h2>
-              <p className="text-lg text-neutral-400 leading-relaxed">
-                Submit a request and our team will send the current catalog with titles, synopses, episode counts, and availability by territory.
-              </p>
-            </div>
-            <div>
-              <InquiryForm
-                formType="catalog-request"
-                fields={catalogFields}
-                submitLabel="Request Catalog"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Screener request form */}
-      <section id="screeners" className="border-t border-neutral-900">
-        <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
-              <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
-                Request screener access
-              </p>
-              <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6">
-                Watch before you buy.
-              </h2>
-              <p className="text-lg text-neutral-400 leading-relaxed">
-                Screener access is available for qualified buyers. Submit a request and we will follow up with secure viewing links.
-              </p>
-            </div>
-            <div>
-              <InquiryForm
-                formType="screener-request"
-                fields={screenerFields}
-                submitLabel="Request Screener Access"
-              />
-            </div>
+        <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32 text-center">
+          <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6">
+            Request the catalog or screener access.
+          </h2>
+          <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10">
+            Get in touch and our team will send the current catalog, set up screener access, or both.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href="/schedule"
+              className="inline-flex items-center justify-center px-8 py-3.5 border border-neutral-700 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:bg-neutral-900 transition-colors"
+            >
+              Book a Call
+            </Link>
           </div>
         </div>
       </section>

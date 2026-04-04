@@ -3,13 +3,14 @@ import Link from "next/link";
 import PageShell from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Studio Model | Pillar Productions",
+  title: "How Our Production Studio Works | Multi-Hub Film and TV Production",
   description:
-    "How Pillar Productions operates as a multi hub studio. HQ in Tampa, skeleton crews in Abuja, McAllen, and Jackson, window licensing, and a growing library flywheel.",
+    "How Pillar Productions operates as a multi-hub production studio for film and television. HQ in Tampa, production hubs in Abuja, McAllen, and Jackson. Window licensing, library flywheel, and scalable series production for brands and platforms.",
+  alternates: { canonical: "https://www.pillarproductions.tv/studio-model" },
   openGraph: {
     title: "Studio Model | Pillar Productions",
     description:
-      "How Pillar Productions operates as a multi hub studio building owned series at scale.",
+      "How Pillar Productions operates as a multi-hub studio building original series at scale.",
   },
 };
 

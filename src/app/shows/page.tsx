@@ -3,13 +3,14 @@ import Link from "next/link";
 import PageShell from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Shows | Pillar Productions",
+  title: "Original Series and Films | Docuseries, Competition Reality, and Branded Entertainment",
   description:
-    "Flagship and developing titles from Pillar Productions. Coastal Torque, Serve It Up, Serving for Greece, and more.",
+    "Watch original series from Pillar Productions including Coastal Torque (motorsports docuseries), Serve It Up (pickleball competition reality), and Serving for Greece (Pickleball World Cup documentary). Cinematic originals available for licensing and brand partnerships.",
+  alternates: { canonical: "https://www.pillarproductions.tv/shows" },
   openGraph: {
-    title: "Shows | Pillar Productions",
+    title: "Original Series and Films | Pillar Productions",
     description:
-      "Flagship and developing titles from Pillar Productions.",
+      "Original docuseries, competition reality, and branded entertainment from Pillar Productions.",
   },
 };
 
@@ -17,29 +18,32 @@ const shows = [
   {
     label: "Flagship",
     title: "Coastal Torque",
+    slug: "coastal-torque" as string | null,
     format: "Docu series",
     status: "In production",
     description:
       "A motorsports docu series set in Sarasota, following builders, drivers, and dreamers chasing speed, community, and calling on and off the track.",
-    trailerPlaceholder: true,
+    trailerUrl: "https://www.youtube.com/embed/Sp1pf_KV6NE",
   },
   {
     label: "Flagship",
     title: "Serve It Up",
+    slug: "serve-it-up" as string | null,
     format: "Competition reality",
     status: "In development",
     description:
       "Twelve contestants, six pros and six amateurs, compete across a full season of pickleball. Pros and amateurs live in two separate houses. Each week, every pro is paired with a different beginner. Every third episode culminates in a tournament. Point standings are never revealed to the players. At the end of the season, the top scoring pro and the top scoring amateur split a $10,000 prize.",
-    trailerPlaceholder: true,
+    trailerUrl: "https://www.youtube.com/embed/jz8vp9Jismc",
   },
   {
     label: "Production",
     title: "Serving for Greece",
+    slug: "serving-for-greece",
     format: "Mini documentary series",
     status: "In production",
     description:
       "A six part docu series following Niko and Christie Fronimos as they represent Greece at the Pickleball World Cup, blending elite sport, family, and faith.",
-    trailerPlaceholder: true,
+    trailerUrl: "https://www.youtube.com/embed/UC0JFH25mag",
   },
 ];
 
@@ -78,9 +82,17 @@ export default function ShowsPage() {
                   Status: {show.status}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
+                  {show.slug && (
+                    <Link
+                      href={`/shows/${show.slug}`}
+                      className="inline-flex items-center justify-center px-6 py-3 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
+                    >
+                      Watch Episodes
+                    </Link>
+                  )}
                   <Link
                     href="/catalog"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
+                    className={`inline-flex items-center justify-center px-6 py-3 ${show.slug ? "border border-neutral-700" : "bg-white text-black"} text-sm font-medium tracking-wide rounded-full ${show.slug ? "hover:border-neutral-500 hover:bg-neutral-900" : "hover:bg-neutral-200"} transition-colors`}
                   >
                     Request Catalog
                   </Link>
@@ -93,7 +105,20 @@ export default function ShowsPage() {
                 </div>
               </div>
               <div>
-                {show.trailerPlaceholder && (
+                {show.trailerUrl ? (
+                  <div className="rounded-2xl overflow-hidden border border-neutral-900 aspect-video">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={show.trailerUrl}
+                      title={`${show.title} Trailer`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                ) : (
                   <div className="bg-neutral-950 rounded-2xl border border-neutral-900 aspect-video flex flex-col items-center justify-center">
                     <p className="text-sm text-neutral-600 tracking-wide mb-2">
                       Trailer coming soon

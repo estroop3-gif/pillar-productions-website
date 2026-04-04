@@ -5,10 +5,8 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/shows", label: "Shows" },
-  { href: "/studio-model", label: "Studio Model" },
   { href: "/licensing", label: "Licensing" },
-  { href: "/branded-series", label: "Branded Series" },
-  { href: "/hubs", label: "Hubs" },
+  { href: "/brands", label: "For Brands" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -46,10 +44,10 @@ export default function SiteHeader() {
               Request Catalog
             </Link>
             <Link
-              href="/branded-series#inquiry"
+              href="/schedule"
               className="inline-flex items-center justify-center px-5 py-2 border border-neutral-700 text-xs font-medium tracking-wide rounded-full hover:border-neutral-500 hover:bg-neutral-900 transition-colors"
             >
-              Brand Inquiry
+              Free Strategy Call
             </Link>
           </div>
 
@@ -105,11 +103,11 @@ export default function SiteHeader() {
                   Request Catalog
                 </Link>
                 <Link
-                  href="/branded-series#inquiry"
+                  href="/schedule"
                   onClick={() => setOpen(false)}
                   className="inline-flex items-center justify-center px-5 py-2.5 border border-neutral-700 text-xs font-medium tracking-wide rounded-full hover:border-neutral-500 hover:bg-neutral-900 transition-colors"
                 >
-                  Brand Inquiry
+                  Free Strategy Call
                 </Link>
               </div>
             </div>

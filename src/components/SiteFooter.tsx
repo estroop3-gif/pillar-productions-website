@@ -24,6 +24,8 @@ export default function SiteFooter() {
               <Link href="/studio-model" className="text-sm text-neutral-400 hover:text-white transition-colors">Studio Model</Link>
               <Link href="/licensing" className="text-sm text-neutral-400 hover:text-white transition-colors">Licensing</Link>
               <Link href="/branded-series" className="text-sm text-neutral-400 hover:text-white transition-colors">Branded Series</Link>
+              <Link href="/brands" className="text-sm text-neutral-400 hover:text-white transition-colors">For Brands</Link>
+              <Link href="/schedule" className="text-sm text-neutral-400 hover:text-white transition-colors">Schedule a Call</Link>
               <Link href="/hubs" className="text-sm text-neutral-400 hover:text-white transition-colors">Hubs</Link>
             </div>
           </div>

@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+
+export const metadata: Metadata = {
+  title:
+    "Pillar Productions | Brand Entertainment Production Partner — How to Get Your Brand Into Film and TV",
+  description:
+    "Pillar Productions is a producing partner that helps brands get into film and television. We produce branded series, docuseries, and cinematic content. Learn how to make a TV show or film for your brand. Book a free strategy call.",
+  alternates: { canonical: "https://www.pillarproductions.tv" },
+  openGraph: {
+    title: "Pillar Productions | Brand Entertainment Production Partner",
+    description:
+      "We help brands get into film and TV. Branded series, docuseries, and cinematic content produced with a story-first approach.",
+  },
+};
 
 export default function Home() {
   return (

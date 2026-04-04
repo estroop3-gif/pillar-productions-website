@@ -3,13 +3,14 @@ import Link from "next/link";
 import PageShell from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Hubs | Pillar Productions",
+  title: "Production Hub Locations | Abuja, McAllen, and Jackson",
   description:
-    "Pillar Productions hub locations in Abuja, McAllen, and Jackson. Skeleton crews producing light seasons at scale with local stories and global reach.",
+    "Pillar Productions operates production hubs in Abuja (Nigeria), McAllen (Texas), and Jackson (Mississippi). Skeleton crews producing original series at volume with local stories and global distribution reach.",
+  alternates: { canonical: "https://www.pillarproductions.tv/hubs" },
   openGraph: {
-    title: "Hubs | Pillar Productions",
+    title: "Production Hub Locations | Pillar Productions",
     description:
-      "Pillar Productions hub locations producing owned series at scale across Abuja, McAllen, and Jackson.",
+      "Production hubs in Abuja, McAllen, and Jackson — producing original series at scale.",
   },
 };
 

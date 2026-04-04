@@ -1,72 +1,19 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
-import InquiryForm from "@/components/InquiryForm";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Branded Series | Pillar Productions",
+  title:
+    "Branded Series Production | How to Make a TV Show for Your Brand",
   description:
-    "Partner with Pillar Productions to create a branded series. Story first integration, cinematic quality, and defined usage rights for your brand.",
+    "Learn how to create a branded TV series with Pillar Productions. We produce original series with natural brand integration — not ads, not sponsored content. Brand-funded, co-owned, or work-for-hire deal structures. See how to make a TV show that audiences actually want to watch.",
+  alternates: { canonical: "https://www.pillarproductions.tv/branded-series" },
   openGraph: {
-    title: "Branded Series | Pillar Productions",
+    title: "Branded Series Production | How to Make a TV Show for Your Brand",
     description:
-      "Partner with Pillar Productions to create a branded series. Story first integration, cinematic quality, and defined usage rights.",
+      "Produce a branded TV series with Pillar Productions. Story-first brand integration, cinematic quality, and clear deal structures.",
   },
 };
-
-const brandFields = [
-  { name: "brand", label: "Brand", required: true },
-  {
-    name: "category",
-    label: "Category",
-    type: "select" as const,
-    required: true,
-    options: [
-      "Automotive",
-      "Consumer Goods",
-      "Financial Services",
-      "Food and Beverage",
-      "Health and Wellness",
-      "Hospitality",
-      "Retail",
-      "Sports and Outdoors",
-      "Technology",
-      "Travel",
-      "Faith and Nonprofit",
-      "Other",
-    ],
-  },
-  {
-    name: "budgetRange",
-    label: "Budget Range",
-    type: "select" as const,
-    required: true,
-    options: [
-      "Under 50K",
-      "50K to 150K",
-      "150K to 500K",
-      "500K to 1M",
-      "Over 1M",
-      "Not sure yet",
-    ],
-  },
-  {
-    name: "timeline",
-    label: "Timeline",
-    type: "select" as const,
-    required: true,
-    options: [
-      "This quarter",
-      "Next quarter",
-      "Within six months",
-      "Within twelve months",
-      "Flexible",
-    ],
-  },
-  { name: "goal", label: "Goal", required: true, placeholder: "What does success look like for this series?" },
-  { name: "name", label: "Your Name", required: true },
-  { name: "email", label: "Email", type: "email" as const, required: true },
-  { name: "message", label: "Message (optional)", type: "textarea" as const },
-];
 
 export default function BrandedSeriesPage() {
   return (
@@ -231,28 +178,28 @@ export default function BrandedSeriesPage() {
         </div>
       </section>
 
-      {/* Brand inquiry form */}
+      {/* CTA */}
       <section id="inquiry" className="border-t border-neutral-900">
-        <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
-              <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
-                Brand inquiry
-              </p>
-              <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6">
-                Start a conversation.
-              </h2>
-              <p className="text-lg text-neutral-400 leading-relaxed">
-                Tell us about your brand and what you are looking to accomplish. Our team will follow up to explore fit and next steps.
-              </p>
-            </div>
-            <div>
-              <InquiryForm
-                formType="brand-inquiry"
-                fields={brandFields}
-                submitLabel="Submit Inquiry"
-              />
-            </div>
+        <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32 text-center">
+          <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6">
+            Ready to start a conversation?
+          </h2>
+          <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10">
+            Tell us about your brand and what you are looking to accomplish. We will follow up to explore fit and next steps.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/schedule"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
+            >
+              Book a Strategy Call
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-3.5 border border-neutral-700 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:bg-neutral-900 transition-colors"
+            >
+              Send a Message
+            </Link>
           </div>
         </div>
       </section>
