@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import InquiryForm from "@/components/InquiryForm";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
+import EmailCapture from "@/components/EmailCapture";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -335,6 +336,17 @@ export default function BrandsPage() {
         </div>
       </section>
 
+      {/* Lead capture */}
+      <section className="border-t border-neutral-900">
+        <div className="max-w-3xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
+          <EmailCapture
+            heading="Not ready to talk yet? Get the free guide."
+            description="How to Get Your Brand on Screen — formats, budgets, deal structures, and what to look for in a producing partner. Sent straight to your inbox."
+            source="brands-page"
+          />
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="border-t border-neutral-900">
         <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32 text-center">
@@ -345,17 +357,17 @@ export default function BrandsPage() {
             Book a free strategy call and find out if film, series, or branded entertainment is the right fit for your brand.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="#consultation"
+            <Link
+              href="/schedule"
               className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
             >
               Book a Free Strategy Call
-            </a>
+            </Link>
             <Link
-              href="/contact"
+              href="/guide"
               className="inline-flex items-center justify-center px-8 py-3.5 border border-neutral-700 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:bg-neutral-900 transition-colors"
             >
-              General Inquiries
+              Get the Free Guide
             </Link>
           </div>
         </div>

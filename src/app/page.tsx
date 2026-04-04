@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import StickyBar from "@/components/StickyBar";
+import EmailCapture from "@/components/EmailCapture";
 
 export const metadata: Metadata = {
   title:
@@ -390,6 +392,13 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Lead Capture */}
+        <section className="border-t border-neutral-900">
+          <div className="max-w-3xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
+            <EmailCapture source="homepage" />
+          </div>
+        </section>
+
         {/* Contact CTA */}
         <section id="contact" className="border-t border-neutral-900">
           <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32 text-center">
@@ -397,23 +406,23 @@ export default function Home() {
               Get started
             </p>
             <h2 className="text-3xl lg:text-5xl font-semibold leading-tight tracking-tight mb-6 max-w-3xl mx-auto">
-              Ready to license, partner, or build?
+              Ready to explore what entertainment could look like for your brand?
             </h2>
             <p className="text-lg text-neutral-400 leading-relaxed mb-10 max-w-2xl mx-auto">
-              Whether you are a broadcaster looking for content, a brand exploring a series, or a partner interested in building a hub, we want to hear from you.
+              Book a free strategy call or send us a message. No commitment, no pitch.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/catalog"
+                href="/schedule"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
               >
-                Request Catalog
+                Book a Strategy Call
               </Link>
               <Link
-                href="/branded-series#inquiry"
+                href="/guide"
                 className="inline-flex items-center justify-center px-8 py-4 border border-neutral-700 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:bg-neutral-900 transition-colors"
               >
-                Brand Inquiry
+                Get the Free Guide
               </Link>
               <Link
                 href="/contact"
@@ -427,6 +436,7 @@ export default function Home() {
       </main>
 
       <SiteFooter />
+      <StickyBar />
     </div>
   );
 }

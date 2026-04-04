@@ -11,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/brands`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/branded-series`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/blog`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
+    { url: `${BASE}/guide`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/videos`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/schedule`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/licensing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/catalog`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

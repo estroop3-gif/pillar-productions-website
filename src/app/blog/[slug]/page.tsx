@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import { getPost, getAllSlugs } from "@/data/blog";
+import EmailCapture from "@/components/EmailCapture";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -164,6 +165,11 @@ export default async function BlogPostPage({ params }: Props) {
                 />
               );
             })}
+          </div>
+
+          {/* Mid-article lead capture */}
+          <div className="mt-12 mb-12">
+            <EmailCapture source={`blog-${post.slug}`} />
           </div>
 
           {/* CTA */}

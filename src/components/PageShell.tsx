@@ -1,5 +1,6 @@
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
+import StickyBar from "./StickyBar";
 
 export default function PageShell({
   children,
@@ -11,6 +12,7 @@ export default function PageShell({
       <SiteHeader />
       <main className="pt-20">{children}</main>
       <SiteFooter />
+      <StickyBar />
     </div>
   );
 }
