@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { buildGuideEmail } from "@/lib/guideEmail";
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY || "";
 const OWNER_EMAIL = process.env.INQUIRY_EMAIL || "estroop3@gmail.com";
@@ -66,8 +67,29 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  // 2. Send instant notification to owner
   if (RESEND_API_KEY) {
+    // 2. Send the branded guide email to the subscriber
+    const guide = buildGuideEmail();
+    try {
+      await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "Pillar Productions <onboarding@resend.dev>",
+          to: email,
+          subject: guide.subject,
+          html: guide.html,
+          text: guide.text,
+        }),
+      });
+    } catch (err) {
+      console.error("Guide email error:", err);
+    }
+
+    // 3. Send instant notification to owner
     try {
       await fetch("https://api.resend.com/emails", {
         method: "POST",
