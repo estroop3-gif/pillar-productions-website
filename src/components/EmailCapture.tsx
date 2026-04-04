@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface EmailCaptureProps {
   heading?: string;
@@ -14,12 +15,16 @@ export default function EmailCapture({
   heading = "Get the free guide: How to Get Your Brand on Screen",
   description = "A step-by-step overview of how brands enter entertainment — formats, budgets, deal structures, and what to look for in a producing partner.",
   buttonLabel = "Send Me the Guide",
-  source = "guide",
+  source,
   variant = "card",
 }: EmailCaptureProps) {
+  const pathname = usePathname();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+
+  // Auto-detect source from pathname if not explicitly provided
+  const resolvedSource = source || pathname.replace(/^\//, "").replace(/\//g, "-") || "homepage";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,7 +35,7 @@ export default function EmailCapture({
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, source }),
+        body: JSON.stringify({ email, source: resolvedSource }),
       });
       const data = await res.json();
       if (!res.ok) {
