@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* How Pillar Works */}
+        {/* How Pillar Works — hidden for now
         <section className="border-t border-neutral-900">
           <div className="max-w-6xl mx-auto px-4 lg:px-12 py-24 lg:py-32">
             <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
@@ -116,6 +116,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        */}
 
         {/* About */}
         <section id="about" className="border-t border-neutral-900">

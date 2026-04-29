@@ -118,7 +118,7 @@ export default function ServingForGreecePage() {
       <section className="pt-16 lg:pt-24 pb-16 lg:pb-20">
         <div className="max-w-6xl mx-auto px-4 lg:px-12">
           <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-6">
-            Production &middot; Mini documentary series &middot; In production
+            Production &middot; Mini documentary series &middot; Completed
           </p>
           <h1 className="text-4xl lg:text-6xl font-semibold leading-tight tracking-tight mb-6 max-w-4xl">
             Serving for Greece

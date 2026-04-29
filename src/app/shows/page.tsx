@@ -40,10 +40,21 @@ const shows = [
     title: "Serving for Greece",
     slug: "serving-for-greece",
     format: "Mini documentary series",
-    status: "In production",
+    status: "Completed",
     description:
       "A six part docu series following Niko and Christie Fronimos as they represent Greece at the Pickleball World Cup, blending elite sport, family, and faith.",
     trailerUrl: "https://www.youtube.com/embed/UC0JFH25mag",
+  },
+  {
+    label: "Flagship",
+    title: "Forty",
+    slug: "slate-forty",
+    format: "Feature film",
+    status: "In development",
+    description:
+      "A man walks into the Georgia woods to fast for forty days and hear from God, but as hunger, silence, dreams, and guilt begin to unravel him, he must face the terrifying possibility that surrender may cost him the life he was trying to save.",
+    trailerUrl: null,
+    posterUrl: "/images/shows/slate-forty-poster.png",
   },
 ];
 
@@ -87,7 +98,7 @@ export default function ShowsPage() {
                       href={`/shows/${show.slug}`}
                       className="inline-flex items-center justify-center px-6 py-3 bg-white text-black text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-colors"
                     >
-                      Watch Episodes
+                      {show.format === "Feature film" ? "View Details" : "Watch Episodes"}
                     </Link>
                   )}
                   <Link
@@ -118,6 +129,12 @@ export default function ShowsPage() {
                       className="w-full h-full"
                     />
                   </div>
+                ) : "posterUrl" in show && show.posterUrl ? (
+                  <img
+                    src={show.posterUrl}
+                    alt={`${show.title} poster`}
+                    className="w-full max-w-sm rounded-2xl border border-neutral-900"
+                  />
                 ) : (
                   <div className="bg-neutral-950 rounded-2xl border border-neutral-900 aspect-video flex flex-col items-center justify-center">
                     <p className="text-sm text-neutral-600 tracking-wide mb-2">
