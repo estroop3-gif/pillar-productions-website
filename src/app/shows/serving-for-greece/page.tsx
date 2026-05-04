@@ -10,8 +10,8 @@ const EPISODES = [
   { number: 2, videoId: "xaHmSpwxUG4", thumb: "/images/shows/ep2.jpg" },
   { number: 3, videoId: "b3yzRp4pyzk", thumb: "/images/shows/ep3.jpg" },
   { number: 4, videoId: "kNhAJiQrJKI", thumb: "/images/shows/ep4.jpg" },
-  { number: 5, videoId: null, thumb: null },
-  { number: 6, videoId: null, thumb: null },
+  { number: 5, videoId: "nppnv2y4aPg", thumb: "/images/shows/ep5.jpg" },
+  { number: 6, videoId: "bp_Rh2s-8vA", thumb: "/images/shows/ep6.jpg" },
 ];
 
 function PlayButton({ size = "lg" }: { size?: "lg" | "sm" }) {
@@ -160,6 +160,18 @@ export default function ServingForGreecePage() {
               />
             ))}
           </div>
+        </div>
+      </section>
+      {/* Behind the Series */}
+      <section className="border-t border-neutral-900">
+        <div className="max-w-6xl mx-auto px-4 lg:px-12 py-16 lg:py-20">
+          <p className="text-xs tracking-[0.25em] uppercase text-neutral-500 mb-8">
+            Behind the Series
+          </p>
+          <VideoCard
+            videoId="f7wXyUgmL1U"
+            thumb={`https://img.youtube.com/vi/f7wXyUgmL1U/maxresdefault.jpg`}
+          />
         </div>
       </section>
     </PageShell>
