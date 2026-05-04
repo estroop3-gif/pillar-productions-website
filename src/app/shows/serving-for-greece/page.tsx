@@ -10,8 +10,8 @@ const EPISODES = [
   { number: 2, videoId: "xaHmSpwxUG4", thumb: "/images/shows/ep2.jpg" },
   { number: 3, videoId: "b3yzRp4pyzk", thumb: "/images/shows/ep3.jpg" },
   { number: 4, videoId: "kNhAJiQrJKI", thumb: "/images/shows/ep4.jpg" },
-  { number: 5, videoId: "nppnv2y4aPg", thumb: "/images/shows/ep5.jpg" },
-  { number: 6, videoId: "bp_Rh2s-8vA", thumb: "/images/shows/ep6.jpg" },
+  { number: 5, videoId: "nppnv2y4aPg", thumb: "https://img.youtube.com/vi/nppnv2y4aPg/maxresdefault.jpg" },
+  { number: 6, videoId: "bp_Rh2s-8vA", thumb: "https://img.youtube.com/vi/bp_Rh2s-8vA/maxresdefault.jpg" },
 ];
 
 function PlayButton({ size = "lg" }: { size?: "lg" | "sm" }) {
